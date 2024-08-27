@@ -4,6 +4,9 @@ pdfs/
 # Ignore zip files
 *.zip
 
+# ignore .devenv
+.devenv/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

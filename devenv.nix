@@ -9,7 +9,6 @@
     pkgs.git
     pkgs.tesseract4
     pkgs.poppler_utils
-    pkgs.pymypdf
     pkgs.mupdf
   ];
 
