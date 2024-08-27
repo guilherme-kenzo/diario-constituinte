@@ -13,6 +13,11 @@ pypdf2 = "^3.0.1"
 pymupdf = "^1.24.9"
 streamlit = "^1.37.1"
 click = "^8.1.7"
+transformers = "^4.44.2"
+torch = "^2.4.0"
+datasets = "^2.21.0"
+evaluate = "^0.4.2"
+sentence-transformers = "^3.0.1"
 
 
 [build-system]

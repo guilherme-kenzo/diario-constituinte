@@ -1,6 +1,9 @@
 # ignore pdfs folder
 pdfs/
 
+# csv files
+*.csv
+
 # Ignore zip files
 *.zip
 
