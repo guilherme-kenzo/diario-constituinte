@@ -1,6 +1,6 @@
 # Crawler and Text Extractions for the "diarios" of the Brazilian Constituent assembly (1987-1988)
 
-This project was setup to run on a nix [devenv](https://devenv.sh/) and poetry. I believe, however, that it using poetry alone should suffice but this setup was not tested.
+This project was set up to run on a nix [devenv](https://devenv.sh/) and poetry. I believe, however, that using Poetry alone should suffice but this setup was not tested.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ python crawler.py 1988-01-01 1988-12-31 # crawl second year
 
 The PDFs of the "diarios" will be downloaded to the pdfs folder.
 
-## How to extract text from pdfs
+## How to extract text from PDFs
 
 ```bash
 mkdir extractions
