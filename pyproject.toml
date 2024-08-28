@@ -18,6 +18,13 @@ torch = "^2.4.0"
 datasets = "^2.21.0"
 evaluate = "^0.4.2"
 sentence-transformers = "^3.0.1"
+jupyterlab = "^4.2.5"
+dash = "^2.17.1"
+lorem-text = "^2.1"
+loguru = "^0.7.2"
+sqlalchemy = "^2.0.32"
+pytest = "^8.3.2"
+ipython = "^8.26.0"
 
 
 [build-system]

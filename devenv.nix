@@ -10,6 +10,9 @@
     pkgs.tesseract4
     pkgs.poppler_utils
     pkgs.mupdf
+    pkgs.bashInteractive
+    pkgs.nix-bash-completions
+    pkgs.bash-completion
   ];
 
   # https://devenv.sh/scripts/
