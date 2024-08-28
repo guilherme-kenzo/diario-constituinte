@@ -1,3 +1,6 @@
+# Ignore .db files
+*.db
+
 # ignore pdfs folder
 pdfs/
 
