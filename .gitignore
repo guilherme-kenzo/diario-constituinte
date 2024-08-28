@@ -1,3 +1,6 @@
+# Ignore .txt files
+*.txt
+
 # Ignore .db files
 *.db
 
