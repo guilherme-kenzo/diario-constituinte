@@ -8,7 +8,6 @@ from .db import Sentence
 @click.command()
 @click.option("--size", type=click.INT)
 @click.option("--output", type=click.STRING)
-@click.option("--input", type=click.STRING)
 def main(size, output, input):
     sentence = Sentence()
     sentences = []

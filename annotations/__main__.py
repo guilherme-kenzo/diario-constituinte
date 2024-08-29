@@ -1,7 +1,6 @@
-from .export_sentences import main
+from .populatedb import main
 
 
 
 if __name__ == "__main__":
-    print("blaaa")
     main()

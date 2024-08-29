@@ -44,9 +44,12 @@ class Sentence:
 
     def insert_many(self, objs: list[dict[str, str]]):
         cursor = self._make_cursor()
-        for i in objs:
-            self._insert(cursor, **i)
+        cursor.executemany(f"""INSERT INTO {self.table_name} (original_sentence, revised_sentence, commentary)
+                            VALUES (?, ?, ?)""", [(i['original_sentence'], i['revised_sentence'], i['commentary']) for i in objs]
+                           )
+        self.conn.commit()
         cursor.close()
+
 
     def _fetch(self, cursor: sqlite3.Cursor, _id: int):
         cursor.execute(f"""
@@ -64,9 +67,12 @@ class Sentence:
         cursor.execute(f"""SELECT * FROM {self.table_name} ORDER BY id ASC LIMIT 10 OFFSET {initial_item}""")
         return cursor.fetchall()
 
-    def list_ids(self):
+    def list_ids(self, random=False):
         cursor = self._make_cursor()
-        cursor.execute(f"""SELECT id FROM {self.table_name}""")
+        query = f"""SELECT id FROM {self.table_name}"""
+        if random:
+            query += " ORDER BY RANDOM()"
+        cursor.execute(query)
         ids = cursor.fetchall()
         return [i[0] for i in ids]
 
@@ -107,3 +113,7 @@ class Sentence:
 
         return self.fetch(_id)
     
+    def count_rows_w_annotations(self):
+        cursor = self._make_cursor()
+        cursor.execute(f"""SELECT count(*) FROM {self.table_name} WHERE revised_sentence IS NOT NULL""")
+        return cursor.fetchone()[0]

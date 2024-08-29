@@ -47,7 +47,7 @@ def test_fetch(sentence):
     sentence.create_table()
     sentence.insert("Original", "Revised", "Commentary")
     result = sentence.fetch(1)
-    assert result == 1  # The _fetch method returns only the id
+    assert result[0] == 1  # The _fetch method returns only the id
 
 def test_list(sentence):
     sentence.create_table()
